@@ -1,4 +1,4 @@
-// https://api.openweathermap.org/data/2.5/weather?q=guna&appid=dca9e2795771e87a058297590bc1f194
+//API pathway
 
 import React,{useEffect, useState} from 'react';
 import WeatherCard from './weatherCard';
@@ -11,7 +11,7 @@ const Temperature = () => {
 
     const getWeatherInfo = async() => {
         try{
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=dca9e2795771e87a058297590bc1f194`;
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=${Api_id}`;
 
             const res = await fetch(url);
             const data = await res.json();
